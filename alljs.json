@@ -1,130 +1,57 @@
 [
     {
-        "id": "1",
-        "displayId": "SRV-001",
-        "estimatedcompletiondate": "",
-        "registeredProducts": {
-            "vin": "KA53HB4898",
-            "dop": "23/03/2020",
-            "milometer": "10000",
-            "model": "Tata Nexon"
+        "id": "f67da9d8-8731-4e5a-8e56-a7bce2b7b8f7",
+        "displayId": "624455",
+        "caseId": "e5e43ae7-c936-11ed-b3de-f9163be8cae9",
+        "status": "DRAFT",
+        "registeredProduct": {
+            "vehicleNumber": "KL40U5359",
+            "milometer": 4500
         },
-        "customerInformation": {
-            "name": "John Doe",
-            "contactNumber": "1234567890"
-        },
+        "customerComplaints": null,
         "servicesProposed": [
             {
-                "taskId": "taskId1",
-                "displayId": "SP-001",
-                "task": "Engine Oil Change",
-                "taskDescription": "Change engine oil and replace oil filter",
-                "price": "500",
-                "status": "OPEN",
-                "assignee": "Mechanic 1",
-                "notes": "Customer requested to use synthetic oil",
-                "starttime": "2023-03-29T09:00:00Z",
-                "endtime": ""
+                "id": "72e055d6-d553-415a-9cc3-e977e892da67",
+                "service": "Change Tyre",
+                "price": 499,
+                "is_selected": true
             },
             {
-                "taskId": "taskId2",
-                "displayId": "SP-002",
-                "task": "Wheel Alignment",
-                "taskDescription": "Adjust the angles of the wheels to the car manufacturer's specifications",
-                "price": "900",
-                "status": "OPEN",
-                "assignee": "Mechanic 2",
-                "notes": "",
-                "starttime": "",
-                "endtime": ""
+                "id": "93cee530-c602-46f1-9643-ec094d8d939f",
+                "service": "Air conditioning service",
+                "price": 150,
+                "is_selected": false
+            },
+            {
+                "id": "171e89b8-2cf0-45d3-932a-d9244ca340bb",
+                "service": "Tire rotation",
+                "price": 75,
+                "is_selected": true
+            },
+            {
+                "id": "ed6095be-2de8-4337-87c3-abbf1a3e1f51",
+                "service": "Battery replacement",
+                "price": 200,
+                "is_selected": true
+
+            },
+            {
+                "id": "c39419da-a5b0-40b5-aa9b-3330edabc296",
+                "service": "Transmission fluid change",
+                "price": 300,
+                "is_selected": true
+
             }
         ],
         "inspectionItems": [
             {
-                "item": "Verified crack",
-                "value": "No crack found"
-            },
-            {
-                "item": "Fuel Check",
-                "value": "Fuel level is at 50%"
-            },
-            {
-                "item": "Oil Level Check",
-                "value": "Oil level is at the minimum level"
-            }
-        ],
-        "serviceAdvisor": "Jane Smith",
-        "status": "NEW",
-        "caseId": "case1",
-        "customercomplints": "The car is making a weird noise when accelerating",
-        "assignee": "",
-        "adminData": {
-            "createdOn": "2023-03-29T09:24:50.971Z",
-            "updatedOn": "2023-03-29T09:24:50.971Z"
-        }
-    },
-    {
-        "id": "2",
-        "displayId": "SRV-002",
-        "estimatedcompletiondate": "",
-        "registeredProducts": {
-            "vin": "KA53HB4899",
-            "dop": "24/03/2020",
-            "milometer": "10000",
-            "model": "KIA"
-        },
-        "customerInformation": {
-            "name": "John Doe",
-            "contactNumber": "1234567890"
-        },
-        "servicesProposed": [
-            {
-                "taskId": "taskId1",
-                "displayId": "SP-001",
-                "task": "Engine Oil Change",
-                "taskDescription": "Change engine oil and replace oil filter",
-                "price": "500",
-                "status": "OPEN",
-                "assignee": "Mechanic 1",
-                "notes": "Customer requested to use synthetic oil",
-                "starttime": "2023-03-29T09:00:00Z",
-                "endtime": ""
-            },
-            {
-                "taskId": "taskId2",
-                "displayId": "SP-002",
-                "task": "Wheel Alignment",
-                "taskDescription": "Adjust the angles of the wheels to the car manufacturer's specifications",
-                "price": "900",
-                "status": "OPEN",
-                "assignee": "Mechanic 2",
-                "notes": "",
-                "starttime": "",
-                "endtime": ""
-            }
-        ],
-        "inspectionItems": [
-            {
-                "item": "Verified crack",
+                "item": "Highlight any mark or dent to the customer",
                 "value": "X"
             },
             {
-                "item": "Fuel Check",
-                "value": "X"
-            },
-            {
-                "item": "Oil Level Check",
+                "item": "Check tookit",
                 "value": "X"
             }
-        ],
-        "serviceAdvisor": "Jane Smith",
-        "status": "NEW",
-        "caseId": "case2",
-        "customercomplints": "The car is making a weird noise when accelerating",
-        "assignee": "",
-        "adminData": {
-            "createdOn": "2023-02-23T09:24:50.971Z",
-            "updatedOn": "2023-02-23T09:24:50.971Z"
-        }
+        ]
     }
 ]
