@@ -1,0 +1,126 @@
+// GET Service form by serviceFormId
+// https://vehicle-service.c7faf5c.kyma.ondemand.com/vehicle-service/service-forms/7146c195-cf5f-4ba0-a643-810abc6026f6
+// Response is object
+{
+    "id": "7146c195-cf5f-4ba0-a643-810abc6026f6",
+    "displayId": "546728",
+    "caseId": "e5e43ae7-c936-11ed-b3de-f9163be8cae9",
+    "status": "DRAFT", // DRAFT /BOOKED   / NEW / IN_PROGRESS / COMPLETED 
+    "milometer": 5689,
+    "registeredProduct": {
+        "vehicleNumber": "KL40U5359",
+        "model": "model",
+        "dop": "dop"
+    },
+    "servicesProposed": [
+        {
+            "id": "c4c177cd-9e53-4582-b3dd-f195aae4cb32", // PATCH-PAYLOAD
+            "service": "Brake inspection",
+            "price": 350,
+            "isSelected": true // PATCH-PAYLOAD
+        },
+        {
+            "id": "c4c177cd-9e53-4582-b3dd-f195aae4cb32",
+            "service": "Brake inspection",
+            "price": 350,
+            "isSelected": true
+        }
+    ],
+    "inspectionItems": [
+        {
+            "id": "c4c177cd-9e53-4582-b3dd-f195aae4cb32", // PATCH-PAYLOAD
+            "isSelected": true, // PATCH-PAYLOAD
+            "description": "Highlight any mark or dent to the customer"
+        }
+    ],
+    "notes": [
+        "notes1",
+        "notes2"
+    ],
+    "customerComplaints": [
+        "Engine Noise",
+        "Engine Power is slow"
+    ]
+}
+// Create Service form  for by using Case ID and expect same response from getservice form using case Id in an object
+// /https://vehicle-service.c7faf5c.kyma.ondemand.com/vehicle-service/service-forms
+//pay load
+{
+    "caseId": "e5e43ae7-c936-11ed-b3de-f9163be8cae9"
+}
+//response
+{ ...
+}
+// Create jobcard Respose
+// Job Card URL
+// POST /vehicle-service/job-cards/?$sourceid=<serviceFormID>&$sourcetype=service-form
+//  $sourceid = "e5e43ae7-c936-11ed-b3de-f9163be8cae9"
+//  $sourcetype=service-form
+{
+    "id": "7146c195-cf5f-4ba0-a643-810abc6026f6",
+    "displayId": "546728",
+    "caseId": "e5e43ae7-c936-11ed-b3de-f9163be8cae9",
+    "status": "BOOKED", // BOOKED /NEW = 'NEW'        DRAFT = 'DRAFT',     BOOKED = 'BOOKED', IN_PROGRESS = 'IN_PROGRESS',  COMPLETED = 'COMPLETED',
+    "milometer": 5689,
+    "customerDetails": {
+        "customer": "John",
+        "contact": "123456789"
+    },
+    "createdOn": "2023-04-14T06:32:31.678Z",
+    "serviceAdvisor": "Patrick",
+    "estimatedCompletionDate": "2023-04-16T06:32:31.678Z",
+    "registeredProduct": {
+        "vehicleNumber": "KL40U5359",
+        "model": "model",
+        "dop": "dop"
+    },
+    "servicesSelected": [
+        {
+            "id": "628219de-cded-471e-823d-260901a41b41",
+            "service": "Tire rotation and balancing",
+            "price": 499,
+            "assignedTechnician": null,
+            "startTime": null,
+            "endTime": null,
+            "notes": null,
+            "observation": null,
+            "status": "OPEN"
+        },
+        {
+            "id": "628219de-cded-471e-823d-260901a41b43",
+            "service": "Tire rotation and balancing sfgwegdsf",
+            "price": 499,
+            "assignedTechnician": null,
+            "startTime": null,
+            "endTime": null,
+            "notes": null,
+            "observation": null,
+            "status": "OPEN"
+        }
+    ],
+    "customerComplaints": [
+        "Engine Noise",
+        "Engine Power is slow"
+    ]
+}
+// PATCH Job card by supervisor / Technician 
+// API: PATCH /vehicle-service/job-cards/:jobCardId/services/628219de-cded-471e-823d-260901a41b41
+
+Payload: {
+    "assignedTechnician": "Peter",
+    "notes": "Check Engine Cracks",
+    "observation": "",
+    "status": 'COMPLETED' // SCHEDULED / IN_PROGRESS  /COMPLETED / OPEN
+}
+
+Response: {
+    "id": "628219de-cded-471e-823d-260901a41b41",
+    "service": "Tire rotation and balancing",
+    "price": 499,
+    "assignedTechnician": null,
+    "startTime": null,
+    "endTime": null,
+    "notes": null,
+    "observation": null,
+    "status": "SCHEDULED"
+}

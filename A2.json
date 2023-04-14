@@ -1,0 +1,136 @@
+{
+    "id": "7146c195-cf5f-4ba0-a643-810abc6026f6",
+    "displayId": "546728",
+    "caseId": "e5e43ae7-c936-11ed-b3de-f9163be8cae9",
+    "status": "DRAFT", // BOOKED
+    "milometer": 5689,
+    "registeredProduct": {
+        "vehicleNumber": "KL40U5359",
+        "model": "model",
+        "dop": "dop"
+    },
+    "servicesProposed": [
+        {
+            "id": "c4c177cd-9e53-4582-b3dd-f195aae4cb32", // post/patch payload
+            "service": "Brake inspection",
+            "price": 350,
+            "isSelected": true // patcch pay
+        },
+        {
+            "id": "c4c177cd-9e53-4582-b3dd-f195aae4cb32", // post/patch payload
+            "service": "Brake inspection",
+            "price": 350,
+            "isSelected": true // patcch pay
+        }
+    ],
+    "inspectionItems": [
+        {
+            "id": "c4c177cd-9e53-4582-b3dd-f195aae4cb32", // post/patch payload
+            "isSelected": true, // patcch pay
+            "description": "Highlight any mark or dent to the customer"
+        }
+    ],
+    "notes": [
+        "notes1",
+        "notes2"
+    ],
+    "customerComplaints": [
+        "Engine Noise",
+        "Engine Power is slow"
+    ]
+}
+// payload
+{
+    "caseId": "e5e43ae7-c936-11ed-b3de-f9163be8cae9"
+}
+// Job Card URL
+POST/vehicle-service/job-cards/?$sourceid=<serviceFOrmID>&$sourcetype=service-form
+
+
+
+    $sourceid: "e5e43ae7-c936-11ed-b3de-f9163be8cae9"
+    $sourcetype=service-form
+
+
+
+
+    {
+    "id": "7146c195-cf5f-4ba0-a643-810abc6026f6",
+    "displayId": "546728",
+    "caseId": "e5e43ae7-c936-11ed-b3de-f9163be8cae9",
+    "status": "BOOKED", // BOOKED /NEW = 'NEW'        DRAFT = 'DRAFT',     BOOKED = 'BOOKED', IN_PROGRESS = 'IN_PROGRESS',  COMPLETED = 'COMPLETED',
+    "milometer": 5689,
+    "registeredProduct": {
+        "vehicleNumber": "KL40U5359",
+        "model": "model",
+        "dop": "dop"
+    },
+    "servicesSelected": [
+        {
+            "id": "628219de-cded-471e-823d-260901a41b41",
+            "service": "Tire rotation and balancing",
+            "price": 499,
+            "assignedTechnician": null,
+            "startTime": null,
+            "endTime": null,
+            "notes": null,
+            "observation": null,
+            "status": "OPEN"
+        },
+        {
+            "id": "628219de-cded-471e-823d-260901a41b43",
+            "service": "Tire rotation and balancing sfgwegdsf",
+            "price": 499,
+            "assignedTechnician": null,
+            "startTime": null,
+            "endTime": null,
+            "notes": null,
+            "observation": null,
+            "status": "OPEN"
+        }
+    ],
+    "customerComplaints": [
+        "Engine Noise",
+        "Engine Power is slow"
+    ]
+}
+// PATCH
+
+
+
+Adds Technician, Add Notes, click on "Schedule Job"
+
+API: PATCH /vehicle-service/job-cards/:jobCardId/services/628219de-cded-471e-823d-260901a41b41
+
+Payload: {
+    "assignedTechnician": "Peter",
+    "notes": "Check Engine Cracks",
+    "status": 'COMPLETED' // SCHEDULED / IN_PROGRESS  /COMPLETED / OPEN
+}
+
+Response: {
+    "id": "628219de-cded-471e-823d-260901a41b41",
+    "service": "Tire rotation and balancing",
+    "minMileage": 5000,
+    "maxMileage": 15000,
+    "price": 499,
+    "ert": 120,
+    "assignedTechnician": "Peter",
+    "startTime": null,
+    "endTime": null,
+    "notes": "Check Engine Cracks",
+    "observation": null,
+    "status": "SCHEDULED"
+}
+
+-------
+
+
+
+Technician VIew
+
+
+{
+    "observation": "sdf",
+    "status": "Check Engine Cracks"
+}

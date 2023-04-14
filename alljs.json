@@ -1,57 +1,71 @@
-[
-    {
-        "id": "f67da9d8-8731-4e5a-8e56-a7bce2b7b8f7",
-        "displayId": "624455",
-        "caseId": "e5e43ae7-c936-11ed-b3de-f9163be8cae9",
-        "status": "DRAFT",
-        "registeredProduct": {
-            "vehicleNumber": "KL40U5359",
-            "milometer": 4500
-        },
-        "customerComplaints": null,
-        "servicesProposed": [
-            {
-                "id": "72e055d6-d553-415a-9cc3-e977e892da67",
-                "service": "Change Tyre",
-                "price": 499,
-                "is_selected": true
-            },
-            {
-                "id": "93cee530-c602-46f1-9643-ec094d8d939f",
-                "service": "Air conditioning service",
-                "price": 150,
-                "is_selected": false
-            },
-            {
-                "id": "171e89b8-2cf0-45d3-932a-d9244ca340bb",
-                "service": "Tire rotation",
-                "price": 75,
-                "is_selected": true
-            },
-            {
-                "id": "ed6095be-2de8-4337-87c3-abbf1a3e1f51",
-                "service": "Battery replacement",
-                "price": 200,
-                "is_selected": true
+{
 
-            },
-            {
-                "id": "c39419da-a5b0-40b5-aa9b-3330edabc296",
-                "service": "Transmission fluid change",
-                "price": 300,
-                "is_selected": true
-
-            }
-        ],
-        "inspectionItems": [
-            {
-                "item": "Highlight any mark or dent to the customer",
-                "value": "X"
-            },
-            {
-                "item": "Check tookit",
-                "value": "X"
-            }
-        ]
+       "id": "7146c195-cf5f-4ba0-a643-810abc6026f6",
+    
+       "displayId": "546728", // make it sequential, which will start from 1
+    
+       "caseId": "e5e43ae7-c936-11ed-b3de-f9163be8cae9",
+    
+       "status": "DRAFT",
+    
+       "milometer": 5689,
+    
+       "registeredProduct": {
+    
+       "vehicleNumber": "KL40U5359",
+    
+           "model": "model",
+    
+           "dop": "dop"
+    
+       },
+    
+       "servicesProposed": [
+    
+           {
+    
+               "id": "c4c177cd-9e53-4582-b3dd-f195aae4cb32", ->persistOnly this field
+    
+               "service": "Brake inspection",
+    
+               "price": 350,
+    
+    "isSelected":"" ->persistOnly this field
+    
+           }
+    
+       ], // id will saved. based on id, services will be fetched
+    
+       "inspectionItems": [
+    
+           {
+    
+                 "id": "c4c177cd-9e53-4582-b3dd-f195aae4cb32" ->persistOnly this field
+    
+               "description": "Highlight any mark or dent to the customer",
+    
+    "isSelected":"" ->persistOnly this field
+    
+           }
+    
+       ],
+    
+    "notes":[
+    
+    "notes1",
+    
+    "notes2"
+    
+    ]
+    
+    // will be persisted
+    
+       "customerComplaints": [
+    
+           "Engine Noise",
+    
+           "Engine Power is slow"
+    
+       ],
+    
     }
-]

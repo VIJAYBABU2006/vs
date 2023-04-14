@@ -1,0 +1,43 @@
+[
+    {
+        "id": "7146c195-cf5f-4ba0-a643-810abc6026f6",
+        "displayId": "546728",
+        "caseId": "e5e43ae7-c936-11ed-b3de-f9163be8cae9",
+        "status": "DRAFT", 
+        "milometer": 5689,
+        "registeredProduct": {
+            "vehicleNumber": "KL40U5359",
+            "model": "model",
+            "dop": "dop"
+        },
+        "servicesProposed": [
+            {
+                "id": "c4c177cd-9e53-4582-b3dd-f195aae4cb32",
+                "service": "Brake inspection",
+                "price": 350,
+                "isSelected": true 
+            },
+            {
+                "id": "c4c177cd-9e53-4582-b3dd-f195aae4cb32",
+                "service": "Brake inspection",
+                "price": 350,
+                "isSelected": true
+            }
+        ],
+        "inspectionItems": [
+            {
+                "id": "c4c177cd-9e53-4582-b3dd-f195aae4cb32", 
+                "isSelected": true, 
+                "description": "Highlight any mark or dent to the customer"
+            }
+        ],
+        "notes": [
+            "notes1",
+            "notes2"
+        ],
+        "customerComplaints": [
+            "Engine Noise",
+            "Engine Power is slow"
+        ]
+    }
+]
